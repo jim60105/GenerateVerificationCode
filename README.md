@@ -1,3 +1,3 @@
 # GenerateVerificationCode
-Use JAVA Servlet to draw verification code picture.
-View Image.java in src/
+Use JAVA Servlet to draw verification code picture. <br>
+View Image.java in src/.
