@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGEncodeParam;
@@ -43,6 +44,9 @@ public class Image extends HttpServlet {
 
 		String text = String.format("%04d",(int)(Math.random()*9999));
 		Font f = new Font("Arial Black", Font.PLAIN, 16); 
+		
+		HttpSession session = request.getSession();
+		session.setAttribute("code", text);
 		
 		g.setFont(f);
 
